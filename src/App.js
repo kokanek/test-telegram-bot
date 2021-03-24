@@ -1,7 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    fetch('/.netlify/functions/hello')
+      .then((res) => res.text())
+      .then(json => console.log(json))
+
+    return () => {
+      
+    }
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
