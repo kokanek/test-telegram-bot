@@ -9,6 +9,10 @@ function App() {
       .then((res) => res.text())
       .then(json => console.log(json))
 
+    fetch('/.netlify/functions/hey')
+      .then((res) => res.text())
+      .then(json => console.log(json))
+
     return () => {
       
     }
